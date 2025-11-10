@@ -71,14 +71,14 @@ export default tseslint.config([
 ## Deployment Notes
 
 ### GitHub Pages Deployment
-This project is currently configured for GitHub Pages deployment with a basename of `/grasso-construction/`.
+This project is currently configured for GitHub Pages deployment with a basename of `/coastal-excavation/`.
 
 **Important**: If deploying to a different hosting platform (Vercel, Netlify, custom domain, etc.), you'll need to update the React Router configuration:
 
 1. Open `src/App.tsx`
 2. Change the basename from:
    ```tsx
-   <Router basename="/grasso-construction">
+   <Router basename="/coastal-excavation">
    ```
    to:
    ```tsx

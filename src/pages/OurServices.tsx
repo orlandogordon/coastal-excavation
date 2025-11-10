@@ -25,7 +25,7 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Excavating</h3>
                 <p className="text-gray-600">
-                  Grasso Construction can offer many excavation & earthwork services. These include preparation for 
+                  Coastal Excavation can offer many excavation & earthwork services. These include preparation for 
                   basements, pools, driveways, and many other residential and commercial projects.
                 </p>
               </div>
@@ -41,7 +41,7 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Concrete</h3>
                 <p className="text-gray-600">
-                  At Grasso Construction our team delivers professional concrete solutions for residential and commercial 
+                  At Coastal Excavation our team delivers professional concrete solutions for residential and commercial 
                   projects. We offer services such as driveways, sidewalks, patios & foundation work with quality craftsmanship.
                 </p>
               </div>
@@ -57,7 +57,7 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Underground Utilities</h3>
                 <p className="text-gray-600">
-                  At Grasso Construction, we are first for all of your underground utility installation needs and underground 
+                  At Coastal Excavation, we are first for all of your underground utility installation needs and underground 
                   utility installations.
                 </p>
               </div>
@@ -73,7 +73,7 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Drainage</h3>
                 <p className="text-gray-600">
-                  At Grasso Construction, we offer many drainage & water management services including French drains, 
+                  At Coastal Excavation, we offer many drainage & water management services including French drains, 
                   dry well systems, and much more.
                 </p>
               </div>
@@ -89,7 +89,7 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Sitework</h3>
                 <p className="text-gray-600">
-                  At Grasso Construction, we offer many site preparation and earthwork services including land clearing, concrete 
+                  At Coastal Excavation, we offer many site preparation and earthwork services including land clearing, concrete 
                   demolition, and site prep.
                 </p>
               </div>
@@ -105,7 +105,7 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Stone Spreading</h3>
                 <p className="text-gray-600">
-                  At Grasso Construction, we are experts in stone spreading and stone installation. We offer stone for backyards, driveways, 
+                  At Coastal Excavation, we are experts in stone spreading and stone installation. We offer stone for backyards, driveways, 
                   walkways and much more.
                 </p>
               </div>
@@ -121,7 +121,7 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Pavers</h3>
                 <p className="text-gray-600">
-                  At Grasso Construction our team creates beautiful hardscaping with quality paver installations. We offer services such as 
+                  At Coastal Excavation our team creates beautiful hardscaping with quality paver installations. We offer services such as 
                   paver patios, walkways, driveways & decorative stonework to enhance your property.
                 </p>
               </div>
@@ -137,8 +137,24 @@ const OurServices = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Retaining Walls</h3>
                 <p className="text-gray-600">
-                  At Grasso Construction our team builds durable retaining walls to prevent erosion and create usable space. We offer services 
+                  At Coastal Excavation our team builds durable retaining walls to prevent erosion and create usable space. We offer services 
                   such as stone walls, block walls & terracing solutions.
+                </p>
+              </div>
+            </div>
+
+            {/* Water & Sewer Service */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img 
+                src="./images/services/sewer.jpeg" 
+                alt="Water & Sewer Service" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Water & Sewer Services</h3>
+                <p className="text-gray-600">
+                  At Coastal Excavation we specialize in water and sewer line repair and installation. Our experienced team handles new     
+  installations, emergency repairs, pipe replacements, and system upgrades for residential and commercial properties.   
                 </p>
               </div>
             </div>
@@ -160,19 +176,19 @@ const OurServices = () => {
             {/* Contact Info */}
             <div className="text-center md:text-right">
               <div className="text-2xl font-bold mb-2">(732) 123-4567</div>
-              <div className="text-gray-300 mb-2">info@grassoconstruction.com</div>
+              <div className="text-gray-300 mb-2">info@coastalexcavation.construction</div>
               <div className="text-gray-300">
                 <div>Mon-Fri 8:00AM-5:00PM</div>
                 <div>Saturday By Appointment</div>
               </div>
               <div className="mt-4">
-                <span className="text-gray-400">@grassoconstruction</span>
+                <span className="text-gray-400">@coastalexcavation</span>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>Copyright 2025 Grasso Construction. All Rights Reserved.</p>
+            <p>Copyright 2025 Coastal Excavation. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

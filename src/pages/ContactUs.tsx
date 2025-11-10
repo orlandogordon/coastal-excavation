@@ -64,7 +64,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">info@grassoconstruction.com</p>
+                    <p className="text-gray-600">info@coastalexcavation.construction</p>
                   </div>
                 </div>
 
@@ -107,7 +107,7 @@ const ContactUs = () => {
                       <path fillRule="evenodd" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.987 11.988 11.987s11.987-5.366 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.326-1.297-.878-.808-1.297-1.959-1.297-3.256V7.565c0-1.297.419-2.448 1.297-3.326.878-.878 2.029-1.297 3.326-1.297h7.102c1.297 0 2.448.419 3.326 1.297.878.878 1.297 2.029 1.297 3.326v4.87c0 1.297-.419 2.448-1.297 3.256-.878.808-2.029 1.297-3.326 1.297H8.449z" clipRule="evenodd" />
                     </svg>
                   </a>
-                  <p className="text-gray-600">@grassoconstruction</p>
+                  <p className="text-gray-600">@coastalexcavation</p>
                 </div>
               </div>
             </div>
@@ -203,19 +203,19 @@ const ContactUs = () => {
             {/* Contact Info */}
             <div className="text-center md:text-right">
               <div className="text-2xl font-bold mb-2">(732) 123-4567</div>
-              <div className="text-gray-300 mb-2">info@grassoconstruction.com</div>
+              <div className="text-gray-300 mb-2">info@coastalexcavation.construction</div>
               <div className="text-gray-300">
                 <div>Mon-Fri 8:00AM-5:00PM</div>
                 <div>Saturday By Appointment</div>
               </div>
               <div className="mt-4">
-                <span className="text-gray-400">@grassoconstruction</span>
+                <span className="text-gray-400">@coastalexcavation</span>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>Copyright 2025 Grasso Construction. All Rights Reserved.</p>
+            <p>Copyright 2025 Coastal Excavation. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

@@ -37,7 +37,7 @@ const Navigation = () => {
             <div className={`text-xl font-bold transition-colors duration-300 ${
               isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'
             }`}>
-              GRASSO CONSTRUCTION
+              Coastal Excavation
             </div>
           </div>
 

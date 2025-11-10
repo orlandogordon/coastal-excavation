@@ -116,6 +116,6 @@ All three main pages have been implemented with full functionality and responsiv
    - Local SEO optimization
 
 ## Deployment Notes
-- Currently configured for GitHub Pages with basename `/grasso-construction/`
+- Currently configured for GitHub Pages with basename `/coastal-excavation/`
 - See README.md for deployment configuration details
 - All routing and image paths properly configured for production

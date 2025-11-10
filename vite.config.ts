@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/grasso-construction/', // Need leading and trailing slashes
+  base: '/coastal-excavation/', // Need leading and trailing slashes
 })

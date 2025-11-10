@@ -7,7 +7,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
-    <Router basename="/grasso-construction">
+    <Router basename="/coastal-excavation">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
