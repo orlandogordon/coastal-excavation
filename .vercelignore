@@ -1,0 +1,7 @@
+temp-react-app
+node_modules
+.next
+.git
+*.log
+.env*.local
+.vercel
