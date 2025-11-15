@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude files
+CHECKLIST.md
+DEPLOYMENT.md
+MIGRATION_SUMMARY.md
