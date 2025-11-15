@@ -17,7 +17,7 @@ export default function ServicesPage() {
             <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Excavating */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <Image
