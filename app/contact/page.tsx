@@ -8,8 +8,12 @@ export default function ContactPage() {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    honeypot: '' // Hidden field for bot detection
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [cooldownTime, setCooldownTime] = useState(0)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -18,12 +22,50 @@ export default function ContactPage() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', phone: '', message: '' })
+
+    // Check cooldown
+    if (cooldownTime > 0) {
+      return
+    }
+
+    // Check honeypot (if filled, it's a bot)
+    if (formData.honeypot) {
+      console.log('Bot detected')
+      return
+    }
+
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', phone: '', message: '', honeypot: '' })
+
+      // Start 5 minute cooldown
+      setCooldownTime(300)
+      setTimeout(() => {
+        setCooldownTime(0)
+      }, 300000) // 5 minutes
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -112,6 +154,18 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot field - hidden from real users */}
+                <input
+                  type="text"
+                  name="honeypot"
+                  value={formData.honeypot}
+                  onChange={handleChange}
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -172,11 +226,28 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {submitStatus === 'success' && (
+                  <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md">
+                    Thank you for your message! We will get back to you soon.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-md">
+                    Failed to send message. Please try again or contact us directly.
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-slate-600 text-white py-3 px-4 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2 transition-colors font-medium"
+                  disabled={isSubmitting || cooldownTime > 0}
+                  className="w-full bg-slate-600 text-white py-3 px-4 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting
+                    ? 'Sending...'
+                    : cooldownTime > 0
+                    ? 'Sent'
+                    : 'Send Message'}
                 </button>
               </form>
             </div>
