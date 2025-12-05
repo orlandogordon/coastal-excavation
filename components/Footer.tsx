@@ -20,12 +20,12 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="text-center md:text-right">
-            <div className="text-2xl font-bold mb-2">(732) 123-4567</div>
+            <div className="text-2xl font-bold mb-2">(908) 670-4582</div>
             <div className="text-gray-300 mb-2">info@coastalexcavation.construction</div>
-            <div className="text-gray-300">
+            {/* <div className="text-gray-300">
               <div>Mon-Fri 8:00AM-5:00PM</div>
               <div>Saturday By Appointment</div>
-            </div>
+            </div> */}
             <div className="mt-4">
               <span className="text-gray-400">@coastalexcavation</span>
             </div>

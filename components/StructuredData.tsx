@@ -18,7 +18,7 @@ export default function StructuredData() {
       "longitude": "-74.4057"
     },
     "url": "https://coastalexcavation.construction",
-    "telephone": "+1-732-123-4567",
+    "telephone": "+1-908-670-4582",
     "email": "info@coastalexcavation.construction",
     "priceRange": "$$",
     "openingHoursSpecification": [
